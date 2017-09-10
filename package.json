@@ -13,7 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0-rc8"
+    "nuxt": "^1.0.0-rc8",
+    "prismic-dom": "^2.0.2",
+    "prismic-javascript": "^1.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
