@@ -34,5 +34,8 @@ module.exports = {
         })
       }
     }
+  },
+  env: {
+    apiPrismicUrl: process.env.API_PRISMIC_URL || 'http://localhost:3000'
   }
 }
