@@ -1,6 +1,13 @@
 <template>
 <div id="products">
-  <h1 class="red">{{ name }}!</h1>
+  <h1 class="red">{{ title }}!</h1>
+  <ul>
+    <li v-for="value in products">
+      {{ value.data.nome_prodotto[0].text }}
+    </li>
+  </ul>
+  <div>{{ products }}</div>
+  
       <div class="links">
         <nuxt-link to="/">Index</nuxt-link>
       </div>
@@ -14,17 +21,21 @@ export default {
     var Prismic = require('prismic-javascript')
     var apiEndpoint = process.env.apiPrismicUrl + '/api/v2'
     // var apiToken = '1234567890'
-    Prismic.getApi(apiEndpoint /*, {accessToken: apiToken} */).then(function (api) {
-      var result = api.query('')
-      console.log(result)
-      return result // An empty query will return all the documents
+    return Prismic.getApi(apiEndpoint /*, {accessToken: apiToken} */).then(function (api) {
+      var myquery = api.query(
+        Prismic.Predicates.at('document.type', 'prodotti')
+      )
+      console.log(myquery)
+      return myquery
     }).then(function (response) {
       console.log('Documents: ', response.results)
+      return { products: response.results, title: 'Products' }
     }, function (err) {
       console.log('Something went wrong: ', err)
+      return { title: err }
     })
     // called every time before loading the component
-    return { name: 'Products' }
+    // return { products: [], name: 'Products' }
   },
   fetch () {
     // The fetch method is used to fill the store before rendering the page
