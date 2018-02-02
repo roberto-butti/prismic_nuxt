@@ -1,5 +1,11 @@
 <template>
+<div id="products">
   <h1 class="red">{{ name }}!</h1>
+      <div class="links">
+        <nuxt-link to="/">Index</nuxt-link>
+      </div>
+
+</div>
 </template>
 
 <script>
