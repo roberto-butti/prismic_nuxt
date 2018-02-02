@@ -23,7 +23,8 @@ export default {
     // var apiToken = '1234567890'
     return Prismic.getApi(apiEndpoint /*, {accessToken: apiToken} */).then(function (api) {
       var myquery = api.query(
-        Prismic.Predicates.at('document.type', 'prodotti')
+        Prismic.Predicates.at('document.type', 'prodotti'),
+        { lang: 'it-it' }
       )
       console.log(myquery)
       return myquery
