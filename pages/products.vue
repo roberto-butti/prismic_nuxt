@@ -3,10 +3,11 @@
   <h1 class="red">{{ title }}!</h1>
   <ul>
     <li v-for="value in products">
-      {{ value.data.nome_prodotto[0].text }}
+      <a :href="'/product/'+value.slugs[0]">{{ value.data.nome_prodotto[0].text }}</a>
+      
     </li>
   </ul>
-  <div>{{ products }}</div>
+  <!-- div>{{ products }}</div  -->
   
       <div class="links">
         <nuxt-link to="/">Index</nuxt-link>
