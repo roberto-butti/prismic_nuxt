@@ -20,4 +20,10 @@ $ npm start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+## Useful Links
+
+- Prismic, [Javascript integration](https://prismic.io/docs/javascript/getting-started/integrating-with-an-existing-javascript-project)
+- Nuxt.js [Guide](https://nuxtjs.org/guide)
+
+
+
