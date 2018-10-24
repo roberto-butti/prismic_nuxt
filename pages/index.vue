@@ -3,7 +3,7 @@
     <div>
       <logo/>
       <h1 class="title">
-        prismic_nuxt
+        prismic_nuxt_2
       </h1>
       <h2 class="subtitle">
         Nuxt.js project with Prismic.io
@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style>
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -35,7 +36,8 @@ export default {
 }
 
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

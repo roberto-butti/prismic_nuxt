@@ -1,8 +1,8 @@
 {
-  "name": "prismic_nuxt",
+  "name": "prismic_nuxt_2",
   "version": "1.0.0",
   "description": "Nuxt.js project with Prismic.io",
-  "author": "Roberto Butti <roberto.butti@gmail.com>",
+  "author": "Roberto Butti",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -13,20 +13,16 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^2.2.0",
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0",
     "prismic-dom": "^2.1.0",
     "prismic-javascript": "^1.5.0"
   },
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^4.19.1",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-loader": "^1.9.0",
-    "eslint-plugin-html": "^3.2.2",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-standard": "^3.1.0",
-    "postcss-loader": "^2.1.6"
+    "nodemon": "^1.11.0",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^5.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.0.0"
   }
 }
