@@ -16,7 +16,8 @@
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "prismic-dom": "^2.1.0",
-    "prismic-javascript": "^1.5.0"
+    "prismic-javascript": "^1.5.0",
+    "prismic-scout": "^0.3.8"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
