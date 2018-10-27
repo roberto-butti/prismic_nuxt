@@ -5,7 +5,7 @@
       <li
         v-for="value in products"
         :key="value.id">
-        <a :href="'/product/'+value.slugs[0]">{{ value.data.nome_prodotto[0].text }}</a>
+        <a :href="'/product/'+value.slugs[0]">{{ value.data.name[0].text }}</a>
       </li>
     </ul>
     <!-- div>{{ products }}</div  -->
@@ -20,12 +20,11 @@ export default {
   asyncData(context) {
     var Prismic = require("prismic-javascript");
     var apiEndpoint = process.env.apiPrismicUrl + "/api/v2";
-    // var apiToken = '1234567890'
     return Prismic.getApi(apiEndpoint /*, {accessToken: apiToken} */)
       .then(function(api) {
         var myquery = api.query(
-          Prismic.Predicates.at("document.type", "prodotti"),
-          { lang: "it-it" }
+          Prismic.Predicates.at("document.type", "products"),
+          { lang: "en-gb" }
         );
         console.log(myquery);
         return myquery;
